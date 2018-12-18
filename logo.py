@@ -59,7 +59,10 @@ def getLogo(driver):
 
 		college = logo_Titles[row_count]
 
-		urllib.urlretrieve(res, "/Users/alonbaruch/Desktop/logos/"+str(college)+".png")
+		try:
+			urllib.urlretrieve(res, "/Users/alonbaruch/Desktop/logos/"+str(college)+".png")
+		except:
+			pass
 
 		row_count += 1
 
